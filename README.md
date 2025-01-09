@@ -1,5 +1,10 @@
 # AI Project Generator
 
+# repo
+https://github.com/pleabargain/auto-idea-generator
+
+
+
 A fork of the DDS AI Project Assistant, enhanced with Ollama integration and improved logging. This interactive web application helps developers brainstorm and implement Generative AI projects using either OpenAI's GPT-4 or local Ollama models.
 
 ## Attribution
