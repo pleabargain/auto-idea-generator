@@ -1,0 +1,394 @@
+2025-01-09 15:30:39,427 - httpx - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2025-01-09 15:30:39,428 - httpx - DEBUG - load_verify_locations cafile='C:\\Users\\denni\\AppData\\Roaming\\Python\\Python312\\site-packages\\certifi\\cacert.pem'
+2025-01-09 15:30:39,744 - ai_wrapper - INFO - OpenAI client initialized successfully
+2025-01-09 15:30:39,746 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2025-01-09 15:30:41,796 - urllib3.connectionpool - DEBUG - http://localhost:11434 "GET /api/version HTTP/1.1" 200 19
+2025-01-09 15:30:41,796 - ai_wrapper - INFO - Ollama detected: 0.5.4
+2025-01-09 15:30:41,809 - httpx - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2025-01-09 15:30:41,810 - httpx - DEBUG - load_verify_locations cafile='C:\\Users\\denni\\AppData\\Roaming\\Python\\Python312\\site-packages\\certifi\\cacert.pem'
+2025-01-09 15:30:41,811 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-01-09 15:30:41,812 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-01-09 15:30:41,896 - __main__ - DEBUG - Fetching available models
+2025-01-09 15:30:41,896 - ai_wrapper - DEBUG - Retrieved OpenAI models
+2025-01-09 15:30:41,897 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2025-01-09 15:30:42,136 - httpcore.connection - DEBUG - connect_tcp.started host='api.gradio.app' port=443 local_address=None timeout=3 socket_options=None
+2025-01-09 15:30:42,180 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /api/telemetry/gradio/initiated HTTP/1.1" 200 0
+2025-01-09 15:30:42,469 - httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000021FAFC52F90>
+2025-01-09 15:30:42,469 - httpcore.connection - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x0000021FAFCF52D0> server_hostname='api.gradio.app' timeout=3
+2025-01-09 15:30:43,040 - httpcore.connection - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000021FAFC1E930>
+2025-01-09 15:30:43,040 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'GET']>
+2025-01-09 15:30:43,040 - httpcore.http11 - DEBUG - send_request_headers.complete
+2025-01-09 15:30:43,040 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'GET']>
+2025-01-09 15:30:43,040 - httpcore.http11 - DEBUG - send_request_body.complete
+2025-01-09 15:30:43,040 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'GET']>
+2025-01-09 15:30:43,325 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Thu, 09 Jan 2025 11:30:42 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'21'), (b'Connection', b'keep-alive'), (b'Server', b'nginx/1.18.0'), (b'Access-Control-Allow-Origin', b'*')])
+2025-01-09 15:30:43,327 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2025-01-09 15:30:43,327 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'GET']>
+2025-01-09 15:30:43,328 - httpcore.http11 - DEBUG - receive_response_body.complete
+2025-01-09 15:30:43,329 - httpcore.http11 - DEBUG - response_closed.started
+2025-01-09 15:30:43,329 - httpcore.http11 - DEBUG - response_closed.complete
+2025-01-09 15:30:43,330 - httpcore.connection - DEBUG - close.started
+2025-01-09 15:30:43,330 - httpcore.connection - DEBUG - close.complete
+2025-01-09 15:30:44,055 - urllib3.connectionpool - DEBUG - http://localhost:11434 "GET /api/tags HTTP/1.1" 200 None
+2025-01-09 15:30:44,055 - ai_wrapper - DEBUG - Retrieved Ollama models: ['llama3.2:latest', 'llama3.3:70b-instruct-q4_K_S', 'llama3.2-vision:latest', 'marco-o1:latest', 'phi3:latest', 'research-phi3:latest', 'phi3:14b-instruct', 'qwen2.5:latest', 'NAME:latest', 'llava:13b', 'mxbai-embed-large:latest', 'nomic-embed-text:latest', 'x/llama3.2-vision:latest', 'mistral:latest', 'granite3-dense:latest']
+2025-01-09 15:30:44,065 - __main__ - DEBUG - Fetching available models
+2025-01-09 15:30:44,065 - ai_wrapper - DEBUG - Retrieved OpenAI models
+2025-01-09 15:30:44,066 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2025-01-09 15:30:46,177 - urllib3.connectionpool - DEBUG - http://localhost:11434 "GET /api/tags HTTP/1.1" 200 None
+2025-01-09 15:30:46,177 - ai_wrapper - DEBUG - Retrieved Ollama models: ['llama3.2:latest', 'llama3.3:70b-instruct-q4_K_S', 'llama3.2-vision:latest', 'marco-o1:latest', 'phi3:latest', 'research-phi3:latest', 'phi3:14b-instruct', 'qwen2.5:latest', 'NAME:latest', 'llava:13b', 'mxbai-embed-large:latest', 'nomic-embed-text:latest', 'x/llama3.2-vision:latest', 'mistral:latest', 'granite3-dense:latest']
+2025-01-09 15:43:47,091 - httpx - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2025-01-09 15:43:47,092 - httpx - DEBUG - load_verify_locations cafile='C:\\Users\\denni\\AppData\\Roaming\\Python\\Python312\\site-packages\\certifi\\cacert.pem'
+2025-01-09 15:43:47,395 - ai_wrapper - INFO - OpenAI client initialized successfully
+2025-01-09 15:43:47,397 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2025-01-09 15:43:49,437 - urllib3.connectionpool - DEBUG - http://localhost:11434 "GET /api/version HTTP/1.1" 200 19
+2025-01-09 15:43:49,437 - ai_wrapper - INFO - Ollama detected: 0.5.4
+2025-01-09 15:43:49,437 - __main__ - INFO - Starting application
+2025-01-09 15:43:49,439 - httpx - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2025-01-09 15:43:49,440 - httpx - DEBUG - load_verify_locations cafile='C:\\Users\\denni\\AppData\\Roaming\\Python\\Python312\\site-packages\\certifi\\cacert.pem'
+2025-01-09 15:43:49,441 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-01-09 15:43:49,442 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-01-09 15:43:49,517 - __main__ - DEBUG - Fetching available models
+2025-01-09 15:43:49,517 - ai_wrapper - DEBUG - Retrieved OpenAI models
+2025-01-09 15:43:49,518 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2025-01-09 15:43:49,742 - httpcore.connection - DEBUG - connect_tcp.started host='api.gradio.app' port=443 local_address=None timeout=3 socket_options=None
+2025-01-09 15:43:49,774 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /api/telemetry/gradio/initiated HTTP/1.1" 200 0
+2025-01-09 15:43:50,014 - httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000028915DCA960>
+2025-01-09 15:43:50,014 - httpcore.connection - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x00000289160252D0> server_hostname='api.gradio.app' timeout=3
+2025-01-09 15:43:50,570 - httpcore.connection - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000028915ED84D0>
+2025-01-09 15:43:50,570 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'GET']>
+2025-01-09 15:43:50,570 - httpcore.http11 - DEBUG - send_request_headers.complete
+2025-01-09 15:43:50,571 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'GET']>
+2025-01-09 15:43:50,571 - httpcore.http11 - DEBUG - send_request_body.complete
+2025-01-09 15:43:50,571 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'GET']>
+2025-01-09 15:43:50,842 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Thu, 09 Jan 2025 11:43:50 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'21'), (b'Connection', b'keep-alive'), (b'Server', b'nginx/1.18.0'), (b'Access-Control-Allow-Origin', b'*')])
+2025-01-09 15:43:50,843 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2025-01-09 15:43:50,844 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'GET']>
+2025-01-09 15:43:50,844 - httpcore.http11 - DEBUG - receive_response_body.complete
+2025-01-09 15:43:50,845 - httpcore.http11 - DEBUG - response_closed.started
+2025-01-09 15:43:50,845 - httpcore.http11 - DEBUG - response_closed.complete
+2025-01-09 15:43:50,846 - httpcore.connection - DEBUG - close.started
+2025-01-09 15:43:50,846 - httpcore.connection - DEBUG - close.complete
+2025-01-09 15:43:51,546 - urllib3.connectionpool - DEBUG - http://localhost:11434 "GET /api/tags HTTP/1.1" 200 None
+2025-01-09 15:43:51,547 - ai_wrapper - DEBUG - Retrieved Ollama models: ['llama3.2', 'llama3.3', 'llama3.2-vision', 'marco-o1', 'phi3', 'research-phi3', 'phi3', 'qwen2.5', 'NAME', 'llava', 'mxbai-embed-large', 'nomic-embed-text', 'x/llama3.2-vision', 'mistral', 'granite3-dense']
+2025-01-09 15:43:51,558 - __main__ - DEBUG - Fetching available models
+2025-01-09 15:43:51,558 - ai_wrapper - DEBUG - Retrieved OpenAI models
+2025-01-09 15:43:51,559 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2025-01-09 15:43:53,614 - urllib3.connectionpool - DEBUG - http://localhost:11434 "GET /api/tags HTTP/1.1" 200 None
+2025-01-09 15:43:53,615 - ai_wrapper - DEBUG - Retrieved Ollama models: ['llama3.2', 'llama3.3', 'llama3.2-vision', 'marco-o1', 'phi3', 'research-phi3', 'phi3', 'qwen2.5', 'NAME', 'llava', 'mxbai-embed-large', 'nomic-embed-text', 'x/llama3.2-vision', 'mistral', 'granite3-dense']
+2025-01-09 15:43:53,831 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-01-09 15:43:53,855 - httpx - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2025-01-09 15:43:53,855 - httpx - DEBUG - load_verify_locations cafile='C:\\Users\\denni\\AppData\\Roaming\\Python\\Python312\\site-packages\\certifi\\cacert.pem'
+2025-01-09 15:43:54,179 - httpcore.connection - DEBUG - connect_tcp.started host='127.0.0.1' port=7860 local_address=None timeout=None socket_options=None
+2025-01-09 15:43:54,179 - httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000002891646FB90>
+2025-01-09 15:43:54,179 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'GET']>
+2025-01-09 15:43:54,180 - httpcore.http11 - DEBUG - send_request_headers.complete
+2025-01-09 15:43:54,180 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'GET']>
+2025-01-09 15:43:54,180 - httpcore.http11 - DEBUG - send_request_body.complete
+2025-01-09 15:43:54,180 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'GET']>
+2025-01-09 15:43:54,180 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'date', b'Thu, 09 Jan 2025 11:43:53 GMT'), (b'server', b'uvicorn'), (b'content-length', b'4'), (b'content-type', b'application/json')])
+2025-01-09 15:43:54,180 - httpx - INFO - HTTP Request: GET http://127.0.0.1:7860/gradio_api/startup-events "HTTP/1.1 200 OK"
+2025-01-09 15:43:54,182 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'GET']>
+2025-01-09 15:43:54,182 - httpcore.http11 - DEBUG - receive_response_body.complete
+2025-01-09 15:43:54,182 - httpcore.http11 - DEBUG - response_closed.started
+2025-01-09 15:43:54,182 - httpcore.http11 - DEBUG - response_closed.complete
+2025-01-09 15:43:54,182 - httpcore.connection - DEBUG - close.started
+2025-01-09 15:43:54,182 - httpcore.connection - DEBUG - close.complete
+2025-01-09 15:43:54,182 - httpx - DEBUG - load_ssl_context verify=False cert=None trust_env=True http2=False
+2025-01-09 15:43:54,183 - httpcore.connection - DEBUG - connect_tcp.started host='127.0.0.1' port=7860 local_address=None timeout=3 socket_options=None
+2025-01-09 15:43:54,200 - httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000002891649C6B0>
+2025-01-09 15:43:54,200 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'HEAD']>
+2025-01-09 15:43:54,202 - httpcore.http11 - DEBUG - send_request_headers.complete
+2025-01-09 15:43:54,202 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'HEAD']>
+2025-01-09 15:43:54,202 - httpcore.http11 - DEBUG - send_request_body.complete
+2025-01-09 15:43:54,202 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'HEAD']>
+2025-01-09 15:43:54,218 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'date', b'Thu, 09 Jan 2025 11:43:53 GMT'), (b'server', b'uvicorn'), (b'content-length', b'41987'), (b'content-type', b'text/html; charset=utf-8')])
+2025-01-09 15:43:54,218 - httpx - INFO - HTTP Request: HEAD http://127.0.0.1:7860/ "HTTP/1.1 200 OK"
+2025-01-09 15:43:54,218 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'HEAD']>
+2025-01-09 15:43:54,218 - httpcore.http11 - DEBUG - receive_response_body.complete
+2025-01-09 15:43:54,218 - httpcore.http11 - DEBUG - response_closed.started
+2025-01-09 15:43:54,218 - httpcore.http11 - DEBUG - response_closed.complete
+2025-01-09 15:43:54,218 - httpcore.connection - DEBUG - close.started
+2025-01-09 15:43:54,218 - httpcore.connection - DEBUG - close.complete
+2025-01-09 15:43:54,220 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-01-09 15:43:54,505 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /api/telemetry/gradio/launched HTTP/1.1" 200 0
+2025-01-09 15:44:03,900 - matplotlib - DEBUG - matplotlib data path: C:\Users\denni\AppData\Roaming\Python\Python312\site-packages\matplotlib\mpl-data
+2025-01-09 15:44:03,905 - matplotlib - DEBUG - CONFIGDIR=C:\Users\denni\.matplotlib
+2025-01-09 15:44:03,907 - matplotlib - DEBUG - interactive is False
+2025-01-09 15:44:03,907 - matplotlib - DEBUG - platform is win32
+2025-01-09 15:44:03,987 - matplotlib - DEBUG - CACHEDIR=C:\Users\denni\.matplotlib
+2025-01-09 15:44:03,991 - matplotlib.font_manager - DEBUG - Using fontManager instance from C:\Users\denni\.matplotlib\fontlist-v390.json
+2025-01-09 15:44:04,318 - matplotlib.pyplot - DEBUG - Loaded backend tkagg version 8.6.
+2025-01-09 15:44:04,318 - matplotlib.pyplot - DEBUG - Loaded backend agg version v2.2.
+2025-01-09 15:44:04,319 - __main__ - DEBUG - Updating model choices for provider: ollama
+2025-01-09 15:44:04,319 - __main__ - DEBUG - Fetching available models
+2025-01-09 15:44:04,319 - ai_wrapper - DEBUG - Retrieved OpenAI models
+2025-01-09 15:44:04,320 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2025-01-09 15:44:06,379 - urllib3.connectionpool - DEBUG - http://localhost:11434 "GET /api/tags HTTP/1.1" 200 None
+2025-01-09 15:44:06,380 - ai_wrapper - DEBUG - Retrieved Ollama models: ['llama3.2', 'llama3.3', 'llama3.2-vision', 'marco-o1', 'phi3', 'research-phi3', 'phi3', 'qwen2.5', 'NAME', 'llava', 'mxbai-embed-large', 'nomic-embed-text', 'x/llama3.2-vision', 'mistral', 'granite3-dense']
+2025-01-09 15:44:06,381 - matplotlib.pyplot - DEBUG - Loaded backend tkagg version 8.6.
+2025-01-09 15:44:10,108 - matplotlib.pyplot - DEBUG - Loaded backend agg version v2.2.
+2025-01-09 15:44:10,109 - ai_wrapper - INFO - Sending prompt using openai with model llama3.2:latest
+2025-01-09 15:44:10,113 - openai._base_client - DEBUG - Request options: {'method': 'post', 'url': '/chat/completions', 'files': None, 'json_data': {'messages': [{'role': 'user', 'content': '\n        Help me brainstorm an AI/Data Science project related to Develop a creative writing AI that generates stories based on prompts. Please provide:\n        1. Project title\n        2. Problem statement\n        3. Suggested approach\n        4. Required technologies/libraries\n        5. Potential challenges\n        6. Expected outcomes\n        '}], 'model': 'llama3.2:latest', 'temperature': 0.7}}
+2025-01-09 15:44:10,148 - openai._base_client - DEBUG - Sending HTTP Request: POST https://api.openai.com/v1/chat/completions
+2025-01-09 15:44:10,148 - httpcore.connection - DEBUG - connect_tcp.started host='api.openai.com' port=443 local_address=None timeout=5.0 socket_options=None
+2025-01-09 15:44:10,465 - httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000028918E5CEF0>
+2025-01-09 15:44:10,465 - httpcore.connection - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x0000028915FE7750> server_hostname='api.openai.com' timeout=5.0
+2025-01-09 15:44:10,751 - httpcore.connection - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000028918E5CE00>
+2025-01-09 15:44:10,751 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-01-09 15:44:10,751 - httpcore.http11 - DEBUG - send_request_headers.complete
+2025-01-09 15:44:10,751 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-01-09 15:44:10,752 - httpcore.http11 - DEBUG - send_request_body.complete
+2025-01-09 15:44:10,752 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-01-09 15:44:11,233 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 404, b'Not Found', [(b'Date', b'Thu, 09 Jan 2025 11:44:10 GMT'), (b'Content-Type', b'application/json; charset=utf-8'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'vary', b'Origin'), (b'x-request-id', b'req_a0685e97223b4978ae737fe4d524a66f'), (b'strict-transport-security', b'max-age=31536000; includeSubDomains; preload'), (b'CF-Cache-Status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=wRPdcvxwQnFzO9Tv.ITFfoKs3Y1y4sayCMDOx7I8Eqw-1736423050-1.0.1.1-Y5eZSNkbHoBiBhPkcK4lxa.HUnGssCzbY369iSVM57SsSNaOcdH9guI5wSStB4.3hl2IVEh5.Rl7jCoYg2Y3MA; path=/; expires=Thu, 09-Jan-25 12:14:10 GMT; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), (b'X-Content-Type-Options', b'nosniff'), (b'Set-Cookie', b'_cfuvid=vgFDuuOGDYbENUBu1dUNAtwOxbeWqJTiL0YDigK4b5o-1736423050726-0.0.1.1-604800000; path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'8ff42c81dffc5fad-MRS'), (b'Content-Encoding', b'br'), (b'alt-svc', b'h3=":443"; ma=86400')])
+2025-01-09 15:44:11,236 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 404 Not Found"
+2025-01-09 15:44:11,236 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-01-09 15:44:11,237 - httpcore.http11 - DEBUG - receive_response_body.complete
+2025-01-09 15:44:11,238 - httpcore.http11 - DEBUG - response_closed.started
+2025-01-09 15:44:11,238 - httpcore.http11 - DEBUG - response_closed.complete
+2025-01-09 15:44:11,238 - openai._base_client - DEBUG - HTTP Response: POST https://api.openai.com/v1/chat/completions "404 Not Found" Headers([('date', 'Thu, 09 Jan 2025 11:44:10 GMT'), ('content-type', 'application/json; charset=utf-8'), ('transfer-encoding', 'chunked'), ('connection', 'keep-alive'), ('vary', 'Origin'), ('x-request-id', 'req_a0685e97223b4978ae737fe4d524a66f'), ('strict-transport-security', 'max-age=31536000; includeSubDomains; preload'), ('cf-cache-status', 'DYNAMIC'), ('set-cookie', '__cf_bm=wRPdcvxwQnFzO9Tv.ITFfoKs3Y1y4sayCMDOx7I8Eqw-1736423050-1.0.1.1-Y5eZSNkbHoBiBhPkcK4lxa.HUnGssCzbY369iSVM57SsSNaOcdH9guI5wSStB4.3hl2IVEh5.Rl7jCoYg2Y3MA; path=/; expires=Thu, 09-Jan-25 12:14:10 GMT; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), ('x-content-type-options', 'nosniff'), ('set-cookie', '_cfuvid=vgFDuuOGDYbENUBu1dUNAtwOxbeWqJTiL0YDigK4b5o-1736423050726-0.0.1.1-604800000; path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), ('server', 'cloudflare'), ('cf-ray', '8ff42c81dffc5fad-MRS'), ('content-encoding', 'br'), ('alt-svc', 'h3=":443"; ma=86400')])
+2025-01-09 15:44:11,239 - openai._base_client - DEBUG - request_id: req_a0685e97223b4978ae737fe4d524a66f
+2025-01-09 15:44:11,239 - openai._base_client - DEBUG - Encountered httpx.HTTPStatusError
+Traceback (most recent call last):
+  File "C:\Users\denni\AppData\Roaming\Python\Python312\site-packages\openai\_base_client.py", line 1043, in _request
+    response.raise_for_status()
+  File "C:\Users\denni\AppData\Roaming\Python\Python312\site-packages\httpx\_models.py", line 763, in raise_for_status
+    raise HTTPStatusError(message, request=request, response=self)
+httpx.HTTPStatusError: Client error '404 Not Found' for url 'https://api.openai.com/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+2025-01-09 15:44:11,284 - openai._base_client - DEBUG - Not retrying
+2025-01-09 15:44:11,284 - openai._base_client - DEBUG - Re-raising status error
+2025-01-09 15:44:11,285 - ai_wrapper - ERROR - Error sending prompt to openai: Error code: 404 - {'error': {'message': 'The model `llama3.2:latest` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-01-09 15:44:11,285 - __main__ - ERROR - Error handling project click: Error: Error code: 404 - {'error': {'message': 'The model `llama3.2:latest` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+2025-01-09 15:44:11,286 - matplotlib.pyplot - DEBUG - Loaded backend tkagg version 8.6.
+2025-01-09 15:45:17,838 - httpcore.connection - DEBUG - close.started
+2025-01-09 15:45:17,838 - httpcore.connection - DEBUG - close.complete
+2025-01-09 15:48:41,472 - httpx - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2025-01-09 15:48:41,473 - httpx - DEBUG - load_verify_locations cafile='C:\\Users\\denni\\AppData\\Roaming\\Python\\Python312\\site-packages\\certifi\\cacert.pem'
+2025-01-09 15:48:41,770 - ai_wrapper - INFO - OpenAI client initialized successfully
+2025-01-09 15:48:41,772 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2025-01-09 15:48:43,821 - urllib3.connectionpool - DEBUG - http://localhost:11434 "GET /api/version HTTP/1.1" 200 19
+2025-01-09 15:48:43,821 - ai_wrapper - INFO - Ollama detected: 0.5.4
+2025-01-09 15:48:43,821 - __main__ - INFO - Starting application
+2025-01-09 15:48:43,823 - httpx - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2025-01-09 15:48:43,825 - httpx - DEBUG - load_verify_locations cafile='C:\\Users\\denni\\AppData\\Roaming\\Python\\Python312\\site-packages\\certifi\\cacert.pem'
+2025-01-09 15:48:43,825 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-01-09 15:48:43,826 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-01-09 15:48:43,901 - __main__ - DEBUG - Fetching available models
+2025-01-09 15:48:43,901 - ai_wrapper - DEBUG - Retrieved OpenAI models
+2025-01-09 15:48:43,902 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2025-01-09 15:48:44,130 - httpcore.connection - DEBUG - connect_tcp.started host='api.gradio.app' port=443 local_address=None timeout=3 socket_options=None
+2025-01-09 15:48:44,185 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /api/telemetry/gradio/initiated HTTP/1.1" 200 0
+2025-01-09 15:48:44,460 - httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001F80FC52A80>
+2025-01-09 15:48:44,461 - httpcore.connection - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x000001F80FB65350> server_hostname='api.gradio.app' timeout=3
+2025-01-09 15:48:45,026 - httpcore.connection - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001F80FBC2690>
+2025-01-09 15:48:45,026 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'GET']>
+2025-01-09 15:48:45,027 - httpcore.http11 - DEBUG - send_request_headers.complete
+2025-01-09 15:48:45,027 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'GET']>
+2025-01-09 15:48:45,027 - httpcore.http11 - DEBUG - send_request_body.complete
+2025-01-09 15:48:45,027 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'GET']>
+2025-01-09 15:48:45,325 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Thu, 09 Jan 2025 11:48:44 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'21'), (b'Connection', b'keep-alive'), (b'Server', b'nginx/1.18.0'), (b'Access-Control-Allow-Origin', b'*')])
+2025-01-09 15:48:45,326 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2025-01-09 15:48:45,327 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'GET']>
+2025-01-09 15:48:45,327 - httpcore.http11 - DEBUG - receive_response_body.complete
+2025-01-09 15:48:45,327 - httpcore.http11 - DEBUG - response_closed.started
+2025-01-09 15:48:45,328 - httpcore.http11 - DEBUG - response_closed.complete
+2025-01-09 15:48:45,328 - httpcore.connection - DEBUG - close.started
+2025-01-09 15:48:45,329 - httpcore.connection - DEBUG - close.complete
+2025-01-09 15:48:45,955 - urllib3.connectionpool - DEBUG - http://localhost:11434 "GET /api/tags HTTP/1.1" 200 None
+2025-01-09 15:48:45,955 - ai_wrapper - DEBUG - Retrieved Ollama models: ['llama3.2', 'llama3.3', 'llama3.2-vision', 'marco-o1', 'phi3', 'research-phi3', 'phi3', 'qwen2.5', 'NAME', 'llava', 'mxbai-embed-large', 'nomic-embed-text', 'x/llama3.2-vision', 'mistral', 'granite3-dense']
+2025-01-09 15:48:45,966 - __main__ - DEBUG - Fetching available models
+2025-01-09 15:48:45,966 - ai_wrapper - DEBUG - Retrieved OpenAI models
+2025-01-09 15:48:45,967 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2025-01-09 15:48:48,034 - urllib3.connectionpool - DEBUG - http://localhost:11434 "GET /api/tags HTTP/1.1" 200 None
+2025-01-09 15:48:48,035 - ai_wrapper - DEBUG - Retrieved Ollama models: ['llama3.2', 'llama3.3', 'llama3.2-vision', 'marco-o1', 'phi3', 'research-phi3', 'phi3', 'qwen2.5', 'NAME', 'llava', 'mxbai-embed-large', 'nomic-embed-text', 'x/llama3.2-vision', 'mistral', 'granite3-dense']
+2025-01-09 15:48:48,257 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-01-09 15:48:48,284 - httpx - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2025-01-09 15:48:48,285 - httpx - DEBUG - load_verify_locations cafile='C:\\Users\\denni\\AppData\\Roaming\\Python\\Python312\\site-packages\\certifi\\cacert.pem'
+2025-01-09 15:48:48,602 - httpcore.connection - DEBUG - connect_tcp.started host='127.0.0.1' port=7860 local_address=None timeout=None socket_options=None
+2025-01-09 15:48:48,603 - httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001F810F8BD40>
+2025-01-09 15:48:48,603 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'GET']>
+2025-01-09 15:48:48,603 - httpcore.http11 - DEBUG - send_request_headers.complete
+2025-01-09 15:48:48,603 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'GET']>
+2025-01-09 15:48:48,604 - httpcore.http11 - DEBUG - send_request_body.complete
+2025-01-09 15:48:48,604 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'GET']>
+2025-01-09 15:48:48,605 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'date', b'Thu, 09 Jan 2025 11:48:48 GMT'), (b'server', b'uvicorn'), (b'content-length', b'4'), (b'content-type', b'application/json')])
+2025-01-09 15:48:48,605 - httpx - INFO - HTTP Request: GET http://127.0.0.1:7860/gradio_api/startup-events "HTTP/1.1 200 OK"
+2025-01-09 15:48:48,605 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'GET']>
+2025-01-09 15:48:48,605 - httpcore.http11 - DEBUG - receive_response_body.complete
+2025-01-09 15:48:48,605 - httpcore.http11 - DEBUG - response_closed.started
+2025-01-09 15:48:48,605 - httpcore.http11 - DEBUG - response_closed.complete
+2025-01-09 15:48:48,605 - httpcore.connection - DEBUG - close.started
+2025-01-09 15:48:48,606 - httpcore.connection - DEBUG - close.complete
+2025-01-09 15:48:48,606 - httpx - DEBUG - load_ssl_context verify=False cert=None trust_env=True http2=False
+2025-01-09 15:48:48,607 - httpcore.connection - DEBUG - connect_tcp.started host='127.0.0.1' port=7860 local_address=None timeout=3 socket_options=None
+2025-01-09 15:48:48,626 - httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001F810FB8950>
+2025-01-09 15:48:48,626 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'HEAD']>
+2025-01-09 15:48:48,626 - httpcore.http11 - DEBUG - send_request_headers.complete
+2025-01-09 15:48:48,626 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'HEAD']>
+2025-01-09 15:48:48,626 - httpcore.http11 - DEBUG - send_request_body.complete
+2025-01-09 15:48:48,626 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'HEAD']>
+2025-01-09 15:48:48,642 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'date', b'Thu, 09 Jan 2025 11:48:48 GMT'), (b'server', b'uvicorn'), (b'content-length', b'42071'), (b'content-type', b'text/html; charset=utf-8')])
+2025-01-09 15:48:48,642 - httpx - INFO - HTTP Request: HEAD http://127.0.0.1:7860/ "HTTP/1.1 200 OK"
+2025-01-09 15:48:48,642 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'HEAD']>
+2025-01-09 15:48:48,642 - httpcore.http11 - DEBUG - receive_response_body.complete
+2025-01-09 15:48:48,642 - httpcore.http11 - DEBUG - response_closed.started
+2025-01-09 15:48:48,642 - httpcore.http11 - DEBUG - response_closed.complete
+2025-01-09 15:48:48,642 - httpcore.connection - DEBUG - close.started
+2025-01-09 15:48:48,642 - httpcore.connection - DEBUG - close.complete
+2025-01-09 15:48:48,644 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-01-09 15:48:48,976 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /api/telemetry/gradio/launched HTTP/1.1" 200 0
+2025-01-09 15:49:05,336 - matplotlib - DEBUG - matplotlib data path: C:\Users\denni\AppData\Roaming\Python\Python312\site-packages\matplotlib\mpl-data
+2025-01-09 15:49:05,341 - matplotlib - DEBUG - CONFIGDIR=C:\Users\denni\.matplotlib
+2025-01-09 15:49:05,345 - matplotlib - DEBUG - interactive is False
+2025-01-09 15:49:05,345 - matplotlib - DEBUG - platform is win32
+2025-01-09 15:49:05,437 - matplotlib - DEBUG - CACHEDIR=C:\Users\denni\.matplotlib
+2025-01-09 15:49:05,443 - matplotlib.font_manager - DEBUG - Using fontManager instance from C:\Users\denni\.matplotlib\fontlist-v390.json
+2025-01-09 15:49:05,734 - matplotlib.pyplot - DEBUG - Loaded backend tkagg version 8.6.
+2025-01-09 15:49:05,734 - matplotlib.pyplot - DEBUG - Loaded backend agg version v2.2.
+2025-01-09 15:49:05,735 - __main__ - DEBUG - Updating model choices for provider: ollama
+2025-01-09 15:49:05,735 - __main__ - DEBUG - Fetching available models
+2025-01-09 15:49:05,735 - ai_wrapper - DEBUG - Retrieved OpenAI models
+2025-01-09 15:49:05,737 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2025-01-09 15:49:07,791 - urllib3.connectionpool - DEBUG - http://localhost:11434 "GET /api/tags HTTP/1.1" 200 None
+2025-01-09 15:49:07,791 - ai_wrapper - DEBUG - Retrieved Ollama models: ['llama3.2', 'llama3.3', 'llama3.2-vision', 'marco-o1', 'phi3', 'research-phi3', 'phi3', 'qwen2.5', 'NAME', 'llava', 'mxbai-embed-large', 'nomic-embed-text', 'x/llama3.2-vision', 'mistral', 'granite3-dense']
+2025-01-09 15:49:07,792 - matplotlib.pyplot - DEBUG - Loaded backend tkagg version 8.6.
+2025-01-09 15:49:10,399 - matplotlib.pyplot - DEBUG - Loaded backend agg version v2.2.
+2025-01-09 15:49:10,400 - ai_wrapper - INFO - Sending prompt using openai with model gpt-4
+2025-01-09 15:49:10,403 - openai._base_client - DEBUG - Request options: {'method': 'post', 'url': '/chat/completions', 'files': None, 'json_data': {'messages': [{'role': 'user', 'content': '\n        Help me brainstorm an AI/Data Science project related to Create a system that can clone and synthesize human voices. Please provide:\n        1. Project title\n        2. Problem statement\n        3. Suggested approach\n        4. Required technologies/libraries\n        5. Potential challenges\n        6. Expected outcomes\n        '}], 'model': 'gpt-4', 'temperature': 0.7}}
+2025-01-09 15:49:10,436 - openai._base_client - DEBUG - Sending HTTP Request: POST https://api.openai.com/v1/chat/completions
+2025-01-09 15:49:10,437 - httpcore.connection - DEBUG - connect_tcp.started host='api.openai.com' port=443 local_address=None timeout=5.0 socket_options=None
+2025-01-09 15:49:10,494 - httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001F80F66CA70>
+2025-01-09 15:49:10,494 - httpcore.connection - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x000001F80FB277D0> server_hostname='api.openai.com' timeout=5.0
+2025-01-09 15:49:10,526 - httpcore.connection - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001F80F66C980>
+2025-01-09 15:49:10,526 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-01-09 15:49:10,527 - httpcore.http11 - DEBUG - send_request_headers.complete
+2025-01-09 15:49:10,527 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-01-09 15:49:10,527 - httpcore.http11 - DEBUG - send_request_body.complete
+2025-01-09 15:49:10,527 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-01-09 15:49:22,759 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Thu, 09 Jan 2025 11:49:22 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'access-control-expose-headers', b'X-Request-ID'), (b'openai-organization', b'user-2ci9zvr6u92bhoqkzycsfhrp'), (b'openai-processing-ms', b'11562'), (b'openai-version', b'2020-10-01'), (b'x-ratelimit-limit-requests', b'10000'), (b'x-ratelimit-limit-tokens', b'10000'), (b'x-ratelimit-remaining-requests', b'9999'), (b'x-ratelimit-remaining-tokens', b'9898'), (b'x-ratelimit-reset-requests', b'8.64s'), (b'x-ratelimit-reset-tokens', b'612ms'), (b'x-request-id', b'req_b1aba0d73c94e49f9293576238fe51b4'), (b'strict-transport-security', b'max-age=31536000; includeSubDomains; preload'), (b'CF-Cache-Status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=MjbgwyaOIHgulBNuhzqyxg7vbdynEE26hg60hd3jGR8-1736423362-1.0.1.1-y.jyV.AklxvdA_jB0GstEXGcke8VPzlyiXSboCW40MwOUX.D2YTtl5O_oyyKGmjngtk8ryX4UecECMd7KA_5KA; path=/; expires=Thu, 09-Jan-25 12:19:22 GMT; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), (b'X-Content-Type-Options', b'nosniff'), (b'Set-Cookie', b'_cfuvid=SuL5NYlmD8pVUwFUmg4cKciWq0BSllepkla94MA0u8E-1736423362459-0.0.1.1-604800000; path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'8ff433d30d511266-DXB'), (b'Content-Encoding', b'br'), (b'alt-svc', b'h3=":443"; ma=86400')])
+2025-01-09 15:49:22,759 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-09 15:49:22,759 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-01-09 15:49:22,759 - httpcore.http11 - DEBUG - receive_response_body.complete
+2025-01-09 15:49:22,759 - httpcore.http11 - DEBUG - response_closed.started
+2025-01-09 15:49:22,759 - httpcore.http11 - DEBUG - response_closed.complete
+2025-01-09 15:49:22,759 - openai._base_client - DEBUG - HTTP Response: POST https://api.openai.com/v1/chat/completions "200 OK" Headers([('date', 'Thu, 09 Jan 2025 11:49:22 GMT'), ('content-type', 'application/json'), ('transfer-encoding', 'chunked'), ('connection', 'keep-alive'), ('access-control-expose-headers', 'X-Request-ID'), ('openai-organization', 'user-2ci9zvr6u92bhoqkzycsfhrp'), ('openai-processing-ms', '11562'), ('openai-version', '2020-10-01'), ('x-ratelimit-limit-requests', '10000'), ('x-ratelimit-limit-tokens', '10000'), ('x-ratelimit-remaining-requests', '9999'), ('x-ratelimit-remaining-tokens', '9898'), ('x-ratelimit-reset-requests', '8.64s'), ('x-ratelimit-reset-tokens', '612ms'), ('x-request-id', 'req_b1aba0d73c94e49f9293576238fe51b4'), ('strict-transport-security', 'max-age=31536000; includeSubDomains; preload'), ('cf-cache-status', 'DYNAMIC'), ('set-cookie', '__cf_bm=MjbgwyaOIHgulBNuhzqyxg7vbdynEE26hg60hd3jGR8-1736423362-1.0.1.1-y.jyV.AklxvdA_jB0GstEXGcke8VPzlyiXSboCW40MwOUX.D2YTtl5O_oyyKGmjngtk8ryX4UecECMd7KA_5KA; path=/; expires=Thu, 09-Jan-25 12:19:22 GMT; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), ('x-content-type-options', 'nosniff'), ('set-cookie', '_cfuvid=SuL5NYlmD8pVUwFUmg4cKciWq0BSllepkla94MA0u8E-1736423362459-0.0.1.1-604800000; path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), ('server', 'cloudflare'), ('cf-ray', '8ff433d30d511266-DXB'), ('content-encoding', 'br'), ('alt-svc', 'h3=":443"; ma=86400')])
+2025-01-09 15:49:22,759 - openai._base_client - DEBUG - request_id: req_b1aba0d73c94e49f9293576238fe51b4
+2025-01-09 15:49:22,765 - ai_wrapper - DEBUG - OpenAI API response received for model gpt-4
+2025-01-09 15:49:22,765 - ai_wrapper - DEBUG - Successfully got response from openai
+2025-01-09 15:49:22,765 - __main__ - INFO - Project click handled successfully: Success! Tokens used: 500
+2025-01-09 15:49:22,766 - matplotlib.pyplot - DEBUG - Loaded backend tkagg version 8.6.
+2025-01-09 16:01:48,267 - httpx - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2025-01-09 16:01:48,267 - httpx - DEBUG - load_verify_locations cafile='C:\\Users\\denni\\AppData\\Roaming\\Python\\Python312\\site-packages\\certifi\\cacert.pem'
+2025-01-09 16:01:48,581 - ai_wrapper - INFO - OpenAI client initialized successfully
+2025-01-09 16:01:48,583 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2025-01-09 16:01:50,631 - urllib3.connectionpool - DEBUG - http://localhost:11434 "GET /api/version HTTP/1.1" 200 19
+2025-01-09 16:01:50,632 - ai_wrapper - INFO - Ollama detected: 0.5.4
+2025-01-09 16:01:50,633 - __main__ - INFO - Starting application
+2025-01-09 16:01:50,643 - httpx - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2025-01-09 16:01:50,652 - httpx - DEBUG - load_verify_locations cafile='C:\\Users\\denni\\AppData\\Roaming\\Python\\Python312\\site-packages\\certifi\\cacert.pem'
+2025-01-09 16:01:50,655 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-01-09 16:01:50,659 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-01-09 16:01:50,773 - __main__ - DEBUG - Fetching available models
+2025-01-09 16:01:50,773 - ai_wrapper - DEBUG - Retrieved OpenAI models
+2025-01-09 16:01:50,774 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2025-01-09 16:01:51,003 - httpcore.connection - DEBUG - connect_tcp.started host='api.gradio.app' port=443 local_address=None timeout=3 socket_options=None
+2025-01-09 16:01:51,027 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /api/telemetry/gradio/initiated HTTP/1.1" 200 0
+2025-01-09 16:01:51,318 - httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000026F072298B0>
+2025-01-09 16:01:51,318 - httpcore.connection - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x0000026F072A1350> server_hostname='api.gradio.app' timeout=3
+2025-01-09 16:01:51,903 - httpcore.connection - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000026F07387B90>
+2025-01-09 16:01:51,903 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'GET']>
+2025-01-09 16:01:51,904 - httpcore.http11 - DEBUG - send_request_headers.complete
+2025-01-09 16:01:51,904 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'GET']>
+2025-01-09 16:01:51,904 - httpcore.http11 - DEBUG - send_request_body.complete
+2025-01-09 16:01:51,904 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'GET']>
+2025-01-09 16:01:52,197 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Thu, 09 Jan 2025 12:01:51 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'21'), (b'Connection', b'keep-alive'), (b'Server', b'nginx/1.18.0'), (b'Access-Control-Allow-Origin', b'*')])
+2025-01-09 16:01:52,197 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2025-01-09 16:01:52,197 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'GET']>
+2025-01-09 16:01:52,197 - httpcore.http11 - DEBUG - receive_response_body.complete
+2025-01-09 16:01:52,197 - httpcore.http11 - DEBUG - response_closed.started
+2025-01-09 16:01:52,197 - httpcore.http11 - DEBUG - response_closed.complete
+2025-01-09 16:01:52,197 - httpcore.connection - DEBUG - close.started
+2025-01-09 16:01:52,197 - httpcore.connection - DEBUG - close.complete
+2025-01-09 16:01:52,835 - urllib3.connectionpool - DEBUG - http://localhost:11434 "GET /api/tags HTTP/1.1" 200 None
+2025-01-09 16:01:52,836 - ai_wrapper - DEBUG - Retrieved Ollama models: ['llama3.2', 'llama3.3', 'llama3.2-vision', 'marco-o1', 'phi3', 'research-phi3', 'phi3', 'qwen2.5', 'NAME', 'llava', 'mxbai-embed-large', 'nomic-embed-text', 'x/llama3.2-vision', 'mistral', 'granite3-dense']
+2025-01-09 16:01:52,845 - __main__ - DEBUG - Fetching available models
+2025-01-09 16:01:52,845 - ai_wrapper - DEBUG - Retrieved OpenAI models
+2025-01-09 16:01:52,847 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2025-01-09 16:01:54,903 - urllib3.connectionpool - DEBUG - http://localhost:11434 "GET /api/tags HTTP/1.1" 200 None
+2025-01-09 16:01:54,903 - ai_wrapper - DEBUG - Retrieved Ollama models: ['llama3.2', 'llama3.3', 'llama3.2-vision', 'marco-o1', 'phi3', 'research-phi3', 'phi3', 'qwen2.5', 'NAME', 'llava', 'mxbai-embed-large', 'nomic-embed-text', 'x/llama3.2-vision', 'mistral', 'granite3-dense']
+2025-01-09 16:01:55,132 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-01-09 16:01:55,157 - httpx - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2025-01-09 16:01:55,157 - httpx - DEBUG - load_verify_locations cafile='C:\\Users\\denni\\AppData\\Roaming\\Python\\Python312\\site-packages\\certifi\\cacert.pem'
+2025-01-09 16:01:55,480 - httpcore.connection - DEBUG - connect_tcp.started host='127.0.0.1' port=7860 local_address=None timeout=None socket_options=None
+2025-01-09 16:01:55,481 - httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000026F086BBE90>
+2025-01-09 16:01:55,481 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'GET']>
+2025-01-09 16:01:55,481 - httpcore.http11 - DEBUG - send_request_headers.complete
+2025-01-09 16:01:55,481 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'GET']>
+2025-01-09 16:01:55,481 - httpcore.http11 - DEBUG - send_request_body.complete
+2025-01-09 16:01:55,481 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'GET']>
+2025-01-09 16:01:55,482 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'date', b'Thu, 09 Jan 2025 12:01:55 GMT'), (b'server', b'uvicorn'), (b'content-length', b'4'), (b'content-type', b'application/json')])
+2025-01-09 16:01:55,483 - httpx - INFO - HTTP Request: GET http://127.0.0.1:7860/gradio_api/startup-events "HTTP/1.1 200 OK"
+2025-01-09 16:01:55,483 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'GET']>
+2025-01-09 16:01:55,483 - httpcore.http11 - DEBUG - receive_response_body.complete
+2025-01-09 16:01:55,483 - httpcore.http11 - DEBUG - response_closed.started
+2025-01-09 16:01:55,483 - httpcore.http11 - DEBUG - response_closed.complete
+2025-01-09 16:01:55,483 - httpcore.connection - DEBUG - close.started
+2025-01-09 16:01:55,484 - httpcore.connection - DEBUG - close.complete
+2025-01-09 16:01:55,484 - httpx - DEBUG - load_ssl_context verify=False cert=None trust_env=True http2=False
+2025-01-09 16:01:55,485 - httpcore.connection - DEBUG - connect_tcp.started host='127.0.0.1' port=7860 local_address=None timeout=3 socket_options=None
+2025-01-09 16:01:55,485 - httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000026F086ECAD0>
+2025-01-09 16:01:55,485 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'HEAD']>
+2025-01-09 16:01:55,486 - httpcore.http11 - DEBUG - send_request_headers.complete
+2025-01-09 16:01:55,488 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'HEAD']>
+2025-01-09 16:01:55,488 - httpcore.http11 - DEBUG - send_request_body.complete
+2025-01-09 16:01:55,488 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'HEAD']>
+2025-01-09 16:01:55,503 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'date', b'Thu, 09 Jan 2025 12:01:55 GMT'), (b'server', b'uvicorn'), (b'content-length', b'42095'), (b'content-type', b'text/html; charset=utf-8')])
+2025-01-09 16:01:55,504 - httpx - INFO - HTTP Request: HEAD http://127.0.0.1:7860/ "HTTP/1.1 200 OK"
+2025-01-09 16:01:55,504 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'HEAD']>
+2025-01-09 16:01:55,504 - httpcore.http11 - DEBUG - receive_response_body.complete
+2025-01-09 16:01:55,504 - httpcore.http11 - DEBUG - response_closed.started
+2025-01-09 16:01:55,504 - httpcore.http11 - DEBUG - response_closed.complete
+2025-01-09 16:01:55,504 - httpcore.connection - DEBUG - close.started
+2025-01-09 16:01:55,504 - httpcore.connection - DEBUG - close.complete
+2025-01-09 16:01:55,507 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-01-09 16:01:55,786 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /api/telemetry/gradio/launched HTTP/1.1" 200 0
+2025-01-09 16:02:06,055 - matplotlib - DEBUG - matplotlib data path: C:\Users\denni\AppData\Roaming\Python\Python312\site-packages\matplotlib\mpl-data
+2025-01-09 16:02:06,062 - matplotlib - DEBUG - CONFIGDIR=C:\Users\denni\.matplotlib
+2025-01-09 16:02:06,063 - matplotlib - DEBUG - interactive is False
+2025-01-09 16:02:06,064 - matplotlib - DEBUG - platform is win32
+2025-01-09 16:02:06,134 - matplotlib - DEBUG - CACHEDIR=C:\Users\denni\.matplotlib
+2025-01-09 16:02:06,138 - matplotlib.font_manager - DEBUG - Using fontManager instance from C:\Users\denni\.matplotlib\fontlist-v390.json
+2025-01-09 16:02:06,424 - matplotlib.pyplot - DEBUG - Loaded backend tkagg version 8.6.
+2025-01-09 16:02:06,424 - matplotlib.pyplot - DEBUG - Loaded backend agg version v2.2.
+2025-01-09 16:02:06,425 - __main__ - DEBUG - Updating model choices for provider: ollama
+2025-01-09 16:02:06,425 - __main__ - DEBUG - Fetching available models
+2025-01-09 16:02:06,425 - ai_wrapper - DEBUG - Retrieved OpenAI models
+2025-01-09 16:02:06,426 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:11434
+2025-01-09 16:02:08,485 - urllib3.connectionpool - DEBUG - http://localhost:11434 "GET /api/tags HTTP/1.1" 200 None
+2025-01-09 16:02:08,486 - ai_wrapper - DEBUG - Retrieved Ollama models: ['llama3.2', 'llama3.3', 'llama3.2-vision', 'marco-o1', 'phi3', 'research-phi3', 'phi3', 'qwen2.5', 'NAME', 'llava', 'mxbai-embed-large', 'nomic-embed-text', 'x/llama3.2-vision', 'mistral', 'granite3-dense']
+2025-01-09 16:02:08,486 - matplotlib.pyplot - DEBUG - Loaded backend tkagg version 8.6.
+2025-01-09 16:02:19,220 - matplotlib.pyplot - DEBUG - Loaded backend agg version v2.2.
+2025-01-09 16:02:19,221 - ai_wrapper - INFO - Sending prompt using openai with model gpt-4
+2025-01-09 16:02:19,226 - openai._base_client - DEBUG - Request options: {'method': 'post', 'url': '/chat/completions', 'files': None, 'json_data': {'messages': [{'role': 'user', 'content': '\n        Help me brainstorm an AI/Data Science project related to Implement a system that creates short videos from text descriptions. Please provide:\n        1. Project title\n        2. Problem statement\n        3. Suggested approach\n        4. Required technologies/libraries\n        5. Potential challenges\n        6. Expected outcomes\n        '}], 'model': 'gpt-4', 'temperature': 0.7}}
+2025-01-09 16:02:19,263 - openai._base_client - DEBUG - Sending HTTP Request: POST https://api.openai.com/v1/chat/completions
+2025-01-09 16:02:19,264 - httpcore.connection - DEBUG - connect_tcp.started host='api.openai.com' port=443 local_address=None timeout=5.0 socket_options=None
+2025-01-09 16:02:19,583 - httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000026F0A0D1EB0>
+2025-01-09 16:02:19,583 - httpcore.connection - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x0000026F072677D0> server_hostname='api.openai.com' timeout=5.0
+2025-01-09 16:02:19,861 - httpcore.connection - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000026F0950F3E0>
+2025-01-09 16:02:19,863 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-01-09 16:02:19,863 - httpcore.http11 - DEBUG - send_request_headers.complete
+2025-01-09 16:02:19,863 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-01-09 16:02:19,863 - httpcore.http11 - DEBUG - send_request_body.complete
+2025-01-09 16:02:19,863 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-01-09 16:02:47,914 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Thu, 09 Jan 2025 12:02:47 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'access-control-expose-headers', b'X-Request-ID'), (b'openai-organization', b'user-2ci9zvr6u92bhoqkzycsfhrp'), (b'openai-processing-ms', b'27629'), (b'openai-version', b'2020-10-01'), (b'x-ratelimit-limit-requests', b'10000'), (b'x-ratelimit-limit-tokens', b'10000'), (b'x-ratelimit-remaining-requests', b'9999'), (b'x-ratelimit-remaining-tokens', b'9896'), (b'x-ratelimit-reset-requests', b'8.64s'), (b'x-ratelimit-reset-tokens', b'624ms'), (b'x-request-id', b'req_84b10650d20c542f1785d89713e361d8'), (b'strict-transport-security', b'max-age=31536000; includeSubDomains; preload'), (b'CF-Cache-Status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=4i2lmvxcaHi5ezM0e4NZlQmsz_lrh1_shawEuEWK7hs-1736424167-1.0.1.1-eSWG3HpAf5BfHRusD4JruIos0gasszmVsaJWhDlboiv2svSTB5RVjrei4wF0dfWwOlynpEbCOZEh9sZ19_jz6A; path=/; expires=Thu, 09-Jan-25 12:32:47 GMT; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), (b'X-Content-Type-Options', b'nosniff'), (b'Set-Cookie', b'_cfuvid=zvoNBDBcu1JCv7oQ4Y9DK_E5NiVM2M2HI9SAl07LEBg-1736424167405-0.0.1.1-604800000; path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'8ff44718adb441b0-MRS'), (b'Content-Encoding', b'br'), (b'alt-svc', b'h3=":443"; ma=86400')])
+2025-01-09 16:02:47,914 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-09 16:02:47,915 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-01-09 16:02:47,916 - httpcore.http11 - DEBUG - receive_response_body.complete
+2025-01-09 16:02:47,916 - httpcore.http11 - DEBUG - response_closed.started
+2025-01-09 16:02:47,916 - httpcore.http11 - DEBUG - response_closed.complete
+2025-01-09 16:02:47,916 - openai._base_client - DEBUG - HTTP Response: POST https://api.openai.com/v1/chat/completions "200 OK" Headers([('date', 'Thu, 09 Jan 2025 12:02:47 GMT'), ('content-type', 'application/json'), ('transfer-encoding', 'chunked'), ('connection', 'keep-alive'), ('access-control-expose-headers', 'X-Request-ID'), ('openai-organization', 'user-2ci9zvr6u92bhoqkzycsfhrp'), ('openai-processing-ms', '27629'), ('openai-version', '2020-10-01'), ('x-ratelimit-limit-requests', '10000'), ('x-ratelimit-limit-tokens', '10000'), ('x-ratelimit-remaining-requests', '9999'), ('x-ratelimit-remaining-tokens', '9896'), ('x-ratelimit-reset-requests', '8.64s'), ('x-ratelimit-reset-tokens', '624ms'), ('x-request-id', 'req_84b10650d20c542f1785d89713e361d8'), ('strict-transport-security', 'max-age=31536000; includeSubDomains; preload'), ('cf-cache-status', 'DYNAMIC'), ('set-cookie', '__cf_bm=4i2lmvxcaHi5ezM0e4NZlQmsz_lrh1_shawEuEWK7hs-1736424167-1.0.1.1-eSWG3HpAf5BfHRusD4JruIos0gasszmVsaJWhDlboiv2svSTB5RVjrei4wF0dfWwOlynpEbCOZEh9sZ19_jz6A; path=/; expires=Thu, 09-Jan-25 12:32:47 GMT; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), ('x-content-type-options', 'nosniff'), ('set-cookie', '_cfuvid=zvoNBDBcu1JCv7oQ4Y9DK_E5NiVM2M2HI9SAl07LEBg-1736424167405-0.0.1.1-604800000; path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), ('server', 'cloudflare'), ('cf-ray', '8ff44718adb441b0-MRS'), ('content-encoding', 'br'), ('alt-svc', 'h3=":443"; ma=86400')])
+2025-01-09 16:02:47,916 - openai._base_client - DEBUG - request_id: req_84b10650d20c542f1785d89713e361d8
+2025-01-09 16:02:47,921 - ai_wrapper - DEBUG - OpenAI API response received for model gpt-4
+2025-01-09 16:02:47,921 - ai_wrapper - DEBUG - Successfully got response from openai
+2025-01-09 16:02:47,921 - __main__ - INFO - Project click handled successfully: Success! Tokens used: 484
+2025-01-09 16:02:47,921 - matplotlib.pyplot - DEBUG - Loaded backend tkagg version 8.6.

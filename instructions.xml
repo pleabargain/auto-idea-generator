@@ -1,0 +1,657 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+    <name>AI Project Generator</name>
+    <description>Step-by-step instructions for creating an AI project generation application</description>
+
+    <prerequisites>
+        <item>Python 3.8 or higher installed</item>
+        <item>OpenAI API key (optional)</item>
+        <item>Ollama installed (optional)</item>
+        <item>Basic understanding of Python programming</item>
+    </prerequisites>
+
+    <api_integration>
+        <provider name="OpenAI">
+            <description>Cloud-based GPT models through OpenAI's API</description>
+            <requirements>
+                <item>Valid API key</item>
+                <item>Internet connection</item>
+            </requirements>
+            <configuration>
+                <key_management>
+                    <source>.env file in project root</source>
+                    <variable>OPENAI_API_KEY</variable>
+                    <validation>Application checks for key presence on startup</validation>
+                </key_management>
+                <models>
+                    <default>gpt-4</default>
+                    <alternatives>
+                        <model>gpt-3.5-turbo</model>
+                        <model>gpt-4-turbo</model>
+                    </alternatives>
+                </models>
+            </configuration>
+        </provider>
+        <provider name="Ollama">
+            <description>Local language models through Ollama</description>
+            <requirements>
+                <item>Ollama installed locally</item>
+                <item>Sufficient system resources for model execution</item>
+            </requirements>
+            <configuration>
+                <endpoint>http://localhost:11434</endpoint>
+                <detection>
+                    <step>Check if Ollama service is running on localhost</step>
+                    <step>Query available models through Ollama API</step>
+                    <step>Populate model selection dropdown with detected models</step>
+                </detection>
+                <models>
+                    <default>llama3.2</default>
+                    <discovery>Automatically populated from local Ollama installation</discovery>
+                </models>
+            </configuration>
+        </provider>
+    </api_integration>
+
+    <logging>
+        <configuration>
+            <directory>logs/</directory>
+            <level>DEBUG</level>
+            <format>%(asctime)s - %(name)s - %(levelname)s - %(message)s</format>
+            <file>app.log</file>
+        </configuration>
+        <events>
+            <category>API Calls</category>
+            <category>User Interactions</category>
+            <category>Model Operations</category>
+            <category>System Status</category>
+        </events>
+    </logging>
+
+    <implementation_details>
+        <code_structure>
+            <file name="ai_wrapper.py">
+                <class name="AIProjectAssistant">
+                    <description>Core class that handles AI model interactions for both OpenAI and Ollama</description>
+                    <attributes>
+                        <attribute name="openai_client">OpenAI client instance</attribute>
+                        <attribute name="ollama_endpoint">URL for Ollama API (default: http://localhost:11434)</attribute>
+                        <attribute name="current_provider">Currently active AI provider (openai or ollama)</attribute>
+                        <attribute name="default_model">Default model for current provider</attribute>
+                        <attribute name="default_temperature">Default temperature for responses (0.7)</attribute>
+                    </attributes>
+                    <methods>
+                        <method name="__init__">
+                            <steps>
+                                <step>Initialize class attributes</step>
+                                <step>Try to initialize OpenAI client from environment variables</step>
+                                <step>Check for Ollama availability on localhost</step>
+                                <step>Set default provider based on availability</step>
+                            </steps>
+                        </method>
+                        <method name="get_available_models">
+                            <steps>
+                                <step>Get OpenAI models if client available</step>
+                                <step>Get Ollama models from API if available</step>
+                                <step>Strip ":latest" suffix from Ollama models for display</step>
+                                <step>Return dictionary with models for each provider</step>
+                            </steps>
+                        </method>
+                        <method name="send_prompt">
+                            <steps>
+                                <step>Handle provider selection and model names</step>
+                                <step>Add ":latest" suffix for Ollama models</step>
+                                <step>Send request to appropriate API</step>
+                                <step>Handle responses and errors</step>
+                                <step>Return standardized response format</step>
+                            </steps>
+                        </method>
+                    </methods>
+                </class>
+            </file>
+            <file name="app.py">
+                <components>
+                    <component name="Logging Setup">
+                        <code>
+                        import logging
+                        from pathlib import Path
+                        
+                        log_dir = Path("logs")
+                        log_dir.mkdir(exist_ok=True)
+                        logging.basicConfig(
+                            filename=log_dir / "app.log",
+                            level=logging.DEBUG,
+                            format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+                            filemode='a'
+                        )
+                        logger = logging.getLogger(__name__)
+                        </code>
+                    </component>
+                    <component name="Gradio Interface">
+                        <tabs>
+                            <tab name="Project Assistant">
+                                <elements>
+                                    <element>Provider selection radio buttons</element>
+                                    <element>Model selection dropdown</element>
+                                    <element>Input type selection</element>
+                                    <element>Query input textbox</element>
+                                    <element>Response output textbox</element>
+                                    <element>Status display</element>
+                                </elements>
+                            </tab>
+                            <tab name="API Configuration">
+                                <elements>
+                                    <element>OpenAI connection status</element>
+                                    <element>Ollama connection status</element>
+                                    <element>Setup instructions</element>
+                                </elements>
+                            </tab>
+                        </tabs>
+                    </component>
+                </components>
+            </file>
+        </code_structure>
+    </implementation_details>
+
+    <development_environment>
+        <requirements>
+            <item>Python 3.8 or higher</item>
+            <item>pip package manager</item>
+            <item>Text editor or IDE (VSCode recommended)</item>
+            <item>Terminal/Command Prompt</item>
+            <item>Git (optional, for version control)</item>
+        </requirements>
+        <recommended_extensions>
+            <extension>Python extension for syntax highlighting and debugging</extension>
+            <extension>Pylance for type checking</extension>
+            <extension>Python Docstring Generator</extension>
+            <extension>Python Environment Manager</extension>
+        </recommended_extensions>
+    </development_environment>
+
+    <code_style_guidelines>
+        <guidelines>
+            <item>Use 4 spaces for indentation</item>
+            <item>Maximum line length of 100 characters</item>
+            <item>Use type hints for function parameters and return values</item>
+            <item>Include docstrings for classes and functions</item>
+            <item>Follow PEP 8 naming conventions</item>
+            <item>Use meaningful variable and function names</item>
+        </guidelines>
+        <logging_practices>
+            <item>Use DEBUG level for detailed execution flow</item>
+            <item>Use INFO for general operational messages</item>
+            <item>Use WARNING for concerning but non-critical issues</item>
+            <item>Use ERROR for failures that need attention</item>
+            <item>Include context in log messages (function name, parameters)</item>
+        </logging_practices>
+    </code_style_guidelines>
+
+    <steps>
+        <step number="1">
+            <title>Project Setup</title>
+            <tasks>
+                <task>Create project directory structure:
+                    <code>
+                    mkdir auto-idea-generator
+                    cd auto-idea-generator
+                    mkdir logs
+                    </code>
+                </task>
+                <task>Create virtual environment:
+                    <code>
+                    python -m venv venv
+                    source venv/bin/activate  # On Unix/macOS
+                    venv\Scripts\activate     # On Windows
+                    </code>
+                </task>
+                <task>Install required packages:
+                    <code>
+                    pip install gradio>=4.0.0 openai>=1.0.0 python-dotenv>=1.0.0 requests>=2.31.0 pathlib>=1.0.1
+                    </code>
+                </task>
+                <task>Create .env file:
+                    <code>
+                    OPENAI_API_KEY=your-api-key-here
+                    </code>
+                </task>
+            </tasks>
+        </step>
+
+        <step number="2">
+            <title>Create AI Wrapper Module</title>
+            <tasks>
+                <task>Create ai_wrapper.py with imports:
+                    <code>
+                    import logging
+                    import os
+                    import requests
+                    from openai import OpenAI
+                    from typing import Dict, Any, Optional
+                    from pathlib import Path
+                    </code>
+                </task>
+                <task>Set up logging configuration:
+                    <code>
+                    log_dir = Path("logs")
+                    log_dir.mkdir(exist_ok=True)
+                    logging.basicConfig(
+                        filename=log_dir / "app.log",
+                        level=logging.DEBUG,
+                        format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+                        filemode='a'
+                    )
+                    logger = logging.getLogger(__name__)
+                    </code>
+                </task>
+                <task>Implement AIProjectAssistant class:
+                    <details>
+                        <initialization>
+                            <code>
+                            def __init__(self):
+                                self.openai_client = None
+                                self.ollama_endpoint = "http://localhost:11434"
+                                self.current_provider = None
+                                self.default_temperature = 0.7
+                                
+                                # Initialize OpenAI
+                                api_key = os.getenv("OPENAI_API_KEY")
+                                if api_key:
+                                    try:
+                                        self.openai_client = OpenAI(api_key=api_key)
+                                        self.current_provider = "openai"
+                                        self.default_model = "gpt-4"
+                                        logger.info("OpenAI client initialized successfully")
+                                    except Exception as e:
+                                        logger.error(f"Failed to initialize OpenAI client: {e}")
+                                
+                                # Check Ollama
+                                try:
+                                    response = requests.get(f"{self.ollama_endpoint}/api/version")
+                                    if response.status_code == 200:
+                                        self.current_provider = self.current_provider or "ollama"
+                                        self.default_model = "llama3.2:latest"
+                                        logger.info(f"Ollama detected: {response.json().get('version')}")
+                                except Exception as e:
+                                    logger.error(f"Failed to detect Ollama: {e}")
+                            </code>
+                        </initialization>
+                        <model_management>
+                            <code>
+                            def get_available_models(self) -> Dict[str, list]:
+                                models = {"openai": [], "ollama": []}
+                                
+                                if self.openai_client:
+                                    models["openai"] = ["gpt-4", "gpt-3.5-turbo", "gpt-4-turbo"]
+                                    logger.debug("Retrieved OpenAI models")
+                                
+                                try:
+                                    response = requests.get(f"{self.ollama_endpoint}/api/tags")
+                                    if response.status_code == 200:
+                                        models["ollama"] = [model["name"].split(":")[0] 
+                                                          for model in response.json().get("models", [])]
+                                        logger.debug(f"Retrieved Ollama models: {models['ollama']}")
+                                except Exception as e:
+                                    logger.error(f"Failed to get Ollama models: {e}")
+                                
+                                return models
+                            </code>
+                        </model_management>
+                        <prompt_handling>
+                            <code>
+                            def send_prompt(self, prompt: str, provider: Optional[str] = None,
+                                          model: Optional[str] = None, 
+                                          temperature: Optional[float] = None) -> Dict[str, Any]:
+                                provider = provider or self.current_provider
+                                temp = temperature or self.default_temperature
+                                
+                                if provider == "openai":
+                                    model = model or "gpt-4"
+                                else:
+                                    if model and not ":" in model:
+                                        model = f"{model}:latest"
+                                    else:
+                                        model = self.default_model
+                                
+                                logger.info(f"Sending prompt using {provider} with model {model}")
+                                
+                                try:
+                                    if provider == "openai" and self.openai_client:
+                                        response = self.openai_client.chat.completions.create(
+                                            model=model,
+                                            messages=[{"role": "user", "content": prompt}],
+                                            temperature=temp
+                                        )
+                                        logger.debug(f"OpenAI API response received")
+                                        return {
+                                            "success": True,
+                                            "content": response.choices[0].message.content,
+                                            "tokens_used": response.usage.total_tokens
+                                        }
+                                    elif provider == "ollama":
+                                        logger.debug(f"Sending request to Ollama")
+                                        response = requests.post(
+                                            f"{self.ollama_endpoint}/api/generate",
+                                            json={
+                                                "model": model,
+                                                "prompt": prompt,
+                                                "temperature": temp
+                                            }
+                                        )
+                                        response.raise_for_status()
+                                        logger.debug("Ollama API response received")
+                                        return {
+                                            "success": True,
+                                            "content": response.json().get("response", ""),
+                                            "tokens_used": "N/A"
+                                        }
+                                    else:
+                                        raise ValueError(f"Invalid provider: {provider}")
+                                except Exception as e:
+                                    logger.error(f"Error: {e}")
+                                    return {
+                                        "success": False,
+                                        "error": str(e)
+                                    }
+                            </code>
+                        </prompt_handling>
+                    </details>
+                </task>
+            </tasks>
+        </step>
+
+        <step number="3">
+            <title>Create Gradio Interface</title>
+            <tasks>
+                <task>Create app.py with imports and logging setup</task>
+                <task>Define project options dictionary:
+                    <code>
+                    PROJECT_OPTIONS = {
+                        "Text-to-Image Generation": "Create an AI system that generates images...",
+                        "GPT Chatbot Assistant": "Build a custom GPT-powered chatbot...",
+                        # ... more options ...
+                    }
+                    </code>
+                </task>
+                <task>Define helper functions:
+                    <functions>
+                        <function name="get_model_choices">
+                            <code>
+                            def get_model_choices() -> Dict[str, list]:
+                                logger.debug("Fetching available models")
+                                return assistant.get_available_models()
+                            </code>
+                        </function>
+                        <function name="update_model_choices">
+                            <code>
+                            def update_model_choices(provider: str) -> Dict:
+                                logger.debug(f"Updating model choices for provider: {provider}")
+                                models = get_model_choices()
+                                default_model = "gpt-4" if provider == "openai" else "llama3.2"
+                                return gr.Dropdown(
+                                    choices=models.get(provider, []),
+                                    value=default_model
+                                )
+                            </code>
+                        </function>
+                        <function name="process_input">
+                            <code>
+                            def process_input(input_type: str, query: str, 
+                                           provider: str, model: str) -> Tuple[str, str]:
+                                if not query.strip():
+                                    logger.warning("Empty query received")
+                                    return "", "Please enter a query"
+                                
+                                logger.info(f"Processing {input_type} request")
+                                response = assistant.brainstorm_project(query) if input_type == "brainstorm" \
+                                         else assistant.get_code_suggestion(query)
+                                
+                                if response["success"]:
+                                    status = f"Success! Tokens: {response.get('tokens_used', 'N/A')}"
+                                    logger.info(f"Request successful: {status}")
+                                    return response["content"], status
+                                else:
+                                    error_msg = f"Error: {response.get('error', 'Unknown error')}"
+                                    logger.error(error_msg)
+                                    return "", error_msg
+                            </code>
+                        </function>
+                    </functions>
+                </task>
+                <task>Create Gradio interface structure:
+                    <interface>
+                        <main_tab>
+                            <code>
+                            with gr.Tab("Project Assistant"):
+                                with gr.Row():
+                                    # Left sidebar
+                                    with gr.Column(scale=1, elem_classes="sidebar"):
+                                        project_buttons = [
+                                            gr.Button(name, elem_classes="project-button")
+                                            for name in PROJECT_OPTIONS.keys()
+                                        ]
+                                    
+                                    # Main content
+                                    with gr.Column(scale=3):
+                                        with gr.Row():
+                                            provider = gr.Radio(
+                                                choices=["openai", "ollama"],
+                                                label="🤖 AI Provider",
+                                                value=assistant.current_provider
+                                            )
+                                            model = gr.Dropdown(
+                                                choices=get_model_choices().get(
+                                                    assistant.current_provider, []
+                                                ),
+                                                label="🔧 Model",
+                                                value=assistant.default_model.split(":")[0]
+                                            )
+                                        
+                                        input_type = gr.Radio(
+                                            choices=["brainstorm", "code"],
+                                            label="What kind of help do you need?"
+                                        )
+                                        
+                                        query = gr.Textbox(
+                                            label="Enter your request",
+                                            elem_classes="output-box"
+                                        )
+                                        
+                                        submit_btn = gr.Button("Get AI Assistance")
+                                        
+                                        with gr.Column(elem_classes="output-box"):
+                                            output = gr.Textbox(
+                                                label="AI Response",
+                                                lines=10
+                                            )
+                                            status = gr.Textbox(label="Status")
+                            </code>
+                        </main_tab>
+                        <config_tab>
+                            <code>
+                            with gr.Tab("API Configuration"):
+                                with gr.Row():
+                                    with gr.Column():
+                                        gr.Markdown("### OpenAI Configuration")
+                                        openai_status = gr.Textbox(
+                                            label="OpenAI Status",
+                                            value="✅ Connected" if assistant.openai_client
+                                            else "❌ Not Connected"
+                                        )
+                                    
+                                    with gr.Column():
+                                        gr.Markdown("### Ollama Configuration")
+                                        ollama_status = gr.Textbox(
+                                            label="Ollama Status",
+                                            value="✅ Connected" if "ollama" in get_model_choices()
+                                            else "❌ Not Connected"
+                                        )
+                            </code>
+                        </config_tab>
+                    </interface>
+                </task>
+                <task>Connect event handlers:
+                    <code>
+                    # Update models when provider changes
+                    provider.change(
+                        fn=update_model_choices,
+                        inputs=[provider],
+                        outputs=[model]
+                    )
+                    
+                    # Handle submit button
+                    submit_btn.click(
+                        fn=process_input,
+                        inputs=[input_type, query, provider, model],
+                        outputs=[output, status]
+                    )
+                    
+                    # Handle project buttons
+                    for btn in project_buttons:
+                        btn.click(
+                            fn=handle_project_click,
+                            inputs=[btn, provider, model],
+                            outputs=[input_type, query, output]
+                        )
+                    </code>
+                </task>
+            </tasks>
+        </step>
+
+        <step number="4">
+            <title>Create Main Application</title>
+            <tasks>
+                <task>Create app.py file</task>
+                <task>Define project options dictionary</task>
+                <task>Create custom CSS styling</task>
+                <task>Implement API configuration tab:
+                    <components>
+                        <component>OpenAI API key input</component>
+                        <component>OpenAI model selection</component>
+                        <component>Ollama model detection and selection</component>
+                        <component>API provider toggle</component>
+                    </components>
+                </task>
+                <task>Implement helper functions:
+                    <functions>
+                        <function>process_input: Handle user input processing</function>
+                        <function>handle_project_click: Handle project button clicks</function>
+                    </functions>
+                </task>
+                <task>Create Gradio interface with components:
+                    <components>
+                        <component>Project options sidebar</component>
+                        <component>Input type radio buttons</component>
+                        <component>Query textbox</component>
+                        <component>Submit button</component>
+                        <component>Output display</component>
+                    </components>
+                </task>
+            </tasks>
+        </step>
+
+        <step number="5">
+            <title>Documentation</title>
+            <tasks>
+                <task>Create README.md with project documentation</task>
+                <task>Create requirements.txt with dependencies</task>
+            </tasks>
+        </step>
+
+        <step number="6">
+            <title>Testing and Running</title>
+            <tasks>
+                <task>Test the application:
+                    <code>python app.py</code>
+                </task>
+                <task>Access the web interface at http://localhost:7860</task>
+                <task>Test different project options and input types</task>
+            </tasks>
+        </step>
+    </steps>
+
+    <files>
+        <file name="ai_wrapper.py">
+            <purpose>OpenAI API wrapper for handling AI interactions</purpose>
+            <key_components>
+                <component>AIProjectAssistant class</component>
+                <component>API communication methods</component>
+                <component>Project and code generation functions</component>
+            </key_components>
+        </file>
+
+        <file name="app.py">
+            <purpose>Main application with Gradio web interface</purpose>
+            <key_components>
+                <component>Project options configuration</component>
+                <component>Custom CSS styling</component>
+                <component>Gradio interface setup</component>
+                <component>Input processing functions</component>
+            </key_components>
+        </file>
+
+        <file name=".env">
+            <purpose>Environment variables configuration</purpose>
+            <key_components>
+                <component>OpenAI API key</component>
+            </key_components>
+        </file>
+    </files>
+
+    <troubleshooting>
+        <issue>
+            <problem>OpenAI API key not found</problem>
+            <solution>
+                <steps>
+                    <step>Check if .env file exists in project root</step>
+                    <step>Verify OPENAI_API_KEY format is correct (no quotes needed)</step>
+                    <step>Ensure python-dotenv is installed</step>
+                    <step>Try setting key directly in environment: export OPENAI_API_KEY=your-key</step>
+                </steps>
+            </solution>
+        </issue>
+        <issue>
+            <problem>Dependencies not found</problem>
+            <solution>
+                <steps>
+                    <step>Activate virtual environment if using one</step>
+                    <step>Run: pip install -r requirements.txt</step>
+                    <step>Verify installations: pip list | grep -E "gradio|openai|requests"</step>
+                    <step>Check Python version compatibility (3.8+)</step>
+                </steps>
+            </solution>
+        </issue>
+        <issue>
+            <problem>Port already in use</problem>
+            <solution>
+                <steps>
+                    <step>Check if another Gradio app is running: netstat -ano | findstr :7860</step>
+                    <step>Kill process if needed: taskkill /PID process_id /F</step>
+                    <step>Or specify different port: interface.launch(server_port=7861)</step>
+                </steps>
+            </solution>
+        </issue>
+        <issue>
+            <problem>Ollama model errors</problem>
+            <solution>
+                <steps>
+                    <step>Verify Ollama is running: curl http://localhost:11434/api/version</step>
+                    <step>Check available models: ollama list</step>
+                    <step>Pull required model: ollama pull llama3.2</step>
+                    <step>Check logs for specific error messages in logs/app.log</step>
+                </steps>
+            </solution>
+        </issue>
+        <issue>
+            <problem>Model switching errors</problem>
+            <solution>
+                <steps>
+                    <step>Check provider selection matches model format</step>
+                    <step>Verify model exists in provider's available models</step>
+                    <step>Clear browser cache if UI shows outdated models</step>
+                    <step>Check logs for model loading errors</step>
+                </steps>
+            </solution>
+        </issue>
+    </troubleshooting>
+</project>
